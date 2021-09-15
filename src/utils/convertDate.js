@@ -8,7 +8,7 @@ const day = [
   "일요일",
 ];
 
-export const convertDate = (newDate) => {
+const convertDate = (newDate) => {
   return (
     newDate.getMonth() +
     1 +
@@ -20,3 +20,5 @@ export const convertDate = (newDate) => {
     day[newDate.getDay()]
   );
 };
+
+export default convertDate;
