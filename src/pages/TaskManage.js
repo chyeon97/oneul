@@ -3,32 +3,28 @@ import GNB from "components/GNB";
 import Head from "components/Header";
 import Contents from "components/Contents";
 import styled from "styled-components";
-import devices from "styles/device";
+
 const TaskManage = () => {
   return (
-    <>
+    <Container>
       <GNB />
       <Body>
         <Head />
         <Contents></Contents>
       </Body>
-    </>
+    </Container>
   );
 };
 
-const Body = styled.div`
-  @media ${({ theme }) => devices.device.mobile} {
-    width: 100%;
-    min-height: auto;
-  }
+const Container = styled.div`
   width: 100%;
-  /* min-height: calc(100vh - 50px); */
+  height: 100%;
+`;
+
+const Body = styled.div`
+  width: 100%;
+  height: auto;
   ${({ theme }) => theme.flexSet("space-around", "center", "column")}
 `;
 
-const Test = styled.div`
-  width: 74.5%;
-  height: 10px;
-  background-color: blue;
-`;
 export default TaskManage;

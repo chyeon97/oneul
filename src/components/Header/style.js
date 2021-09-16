@@ -2,22 +2,18 @@ import styled from "styled-components";
 import devices from "styles/device";
 
 const Container = styled.div`
-  @media ${({ theme }) => devices.device.mobile} {
-    height: 30vh;
-  }
   width: 100%;
-  height: 200px;
-  /* background-color: wheat; */
+  height: 20vh;
   ${({ theme }) => theme.flexSet()}
 `;
 
 const Input = styled.div`
   @media ${({ theme }) => devices.device.mobile} {
     width: 75%;
-    height: 30%;
+    height: 50px;
   }
   width: 40%;
-  height: 20%;
+  height: 50px;
   padding: 2px 10px;
   background-color: #cff09e;
   position: relative;
@@ -28,7 +24,7 @@ const Input = styled.div`
 const TodoInput = styled.input`
   @media ${({ theme }) => devices.device.mobile} {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   width: 85%;
   font-size: 18px;
@@ -45,7 +41,6 @@ const CalendarBtn = styled.button`
   display: flex;
   position: relative;
   width: 17%;
-  height: 100%;
   border: 1px solid #3f4b3b;
   border-radius: 5px;
   color: black;
@@ -60,14 +55,13 @@ const AddBtn = styled.button`
   @media ${({ theme }) => devices.device.mobile} {
     width: 14%;
     padding: 10px;
-    height: 30%;
+    height: 50px;
   }
   font-weight: bold;
   margin-left: 5px;
   width: 5%;
-  height: auto;
+  height: 50px;
   padding: 10px;
-  /* border: 2px solid #3f4b3b; */
   border-radius: 5px;
   color: white;
   background-color: #3f4b3b;

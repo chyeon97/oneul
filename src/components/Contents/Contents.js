@@ -17,12 +17,12 @@ const Contents = () => {
             color={"#f6b352"}
             value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
             date={["2021.09.15"]}
-          />
+          />{" "}
           <Item
             color={"#f6b352"}
             value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
             date={["2021.09.15"]}
-          />
+          />{" "}
           <Item
             color={"#f6b352"}
             value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
@@ -42,7 +42,7 @@ const Contents = () => {
             color={"#f6b352"}
             value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
             date={["2021.09.15"]}
-          />{" "}
+          />
           <Item
             color={"#f6b352"}
             value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
@@ -57,7 +57,22 @@ const Contents = () => {
             color={"#f6b352"}
             value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
             date={["2021.09.15"]}
-          />
+          />{" "}
+          <Item
+            color={"#f6b352"}
+            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
+            date={["2021.09.15"]}
+          />{" "}
+          <Item
+            color={"#f6b352"}
+            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
+            date={["2021.09.15"]}
+          />{" "}
+          <Item
+            color={"#f6b352"}
+            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
+            date={["2021.09.15"]}
+          />{" "}
           <Item
             color={"#f6b352"}
             value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
@@ -73,6 +88,7 @@ const Contents = () => {
       {/* IN PROGRESS */}
       <Box>
         <Label label={"IN PROGRESS"} color={"#ABD0CE"} />
+        <Section></Section>
       </Box>
       {/* DONE */}
       <Box>
