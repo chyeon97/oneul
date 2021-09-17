@@ -7,10 +7,11 @@ const Container = styled.div`
     ${({ theme }) => theme.flexSet("space-between", "center", "row")}
   }
   @media ${({ theme }) => devices.device.desktop} {
-    ${({ theme }) => theme.flexSet("space-around", "center", "row")}
+    ${({ theme }) => theme.flexSet("space-between", "center", "row")}
   }
   width: 100%;
   height: 50px;
+  padding: 0px 140px;
   box-shadow: 0px 5px 5px #00000010;
 `;
 

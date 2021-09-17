@@ -1,8 +1,9 @@
 import React from "react";
 import GNB from "components/GNB";
 import Head from "components/Header";
-import Contents from "components/Contents";
+import Contents from "components/Task";
 import styled from "styled-components";
+import devices from "styles/device";
 
 const TaskManage = () => {
   return (
@@ -22,8 +23,12 @@ const Container = styled.div`
 `;
 
 const Body = styled.div`
-  width: 100%;
+  @media ${({ theme }) => devices.device.mobile} {
+    width: 95%;
+  }
+  width: 85%;
   height: auto;
+  margin: 0 auto;
   ${({ theme }) => theme.flexSet("space-around", "center", "column")}
 `;
 

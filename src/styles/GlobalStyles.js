@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
         @media ${({ theme }) => devices.device.mobile}{
             overflow-y: auto;
         }
-        overflow-y:hidden
+        overflow-y:auto
     }
     /* div{
         height:100%;
