@@ -1,11 +1,12 @@
 import React from "react";
-import Checkbox from "components/Checkbox";
+import { useDispatch } from "react-redux";
+import { openModal } from "store/actions";
 import { style } from "./style";
 
 const Item = ({ color, value, date }) => {
+  const dispatch = useDispatch();
   return (
-    <Container>
-      <Checkbox color={color} />
+    <Container onClick={() => dispatch(openModal(value, date, "Done"))}>
       <Contents readOnly value={value}></Contents>
       <EndDate color={color}>{date}</EndDate>
     </Container>

@@ -17,6 +17,7 @@ const Contents = styled.input`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 `;
 
 const EndDate = styled.h2`

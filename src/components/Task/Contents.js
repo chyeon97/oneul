@@ -13,76 +13,14 @@ const Contents = () => {
           <Label label={"TO DO"} color={"#DFDFDF"} />
         </LabelLayout>
         <Section>
+          <Item color={"#f6b352"} value={"통신"} date={"2021/9/16"} />{" "}
           <Item
             color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
+            value={"코딩 테스트 문제 풀기"}
+            date={"2021/9/17"}
           />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />{" "}
-          <Item
-            color={"#f6b352"}
-            value={"TestTODOTestTODOTestTODOTestTODOTestTODOTestTODOTestTODO"}
-            date={["2021.09.15"]}
-          />
+          <Item color={"#f6b352"} value={"리액트 공부"} date={"2021/9/15"} />{" "}
+          <Item color={"#f6b352"} value={"CORS 정리"} date={"2021/9/15"} />
         </Section>
       </Box>
       {/* IN PROGRESS */}

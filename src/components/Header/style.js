@@ -17,6 +17,7 @@ const Input = styled.div`
   padding: 2px 10px;
   background-color: #cff09e;
   position: relative;
+  z-index: 0;
   border-radius: 5px;
   ${({ theme }) => theme.flexSet()};
 `;
@@ -31,24 +32,6 @@ const TodoInput = styled.input`
   color: black;
   padding-right: 5px;
   ${({ theme }) => theme.flexSet()}
-`;
-
-const CalendarBtn = styled.button`
-  @media ${({ theme }) => devices.device.mobile} {
-    width: 50%;
-    padding: 2px;
-  }
-  display: flex;
-  position: relative;
-  width: 17%;
-  border: 1px solid #3f4b3b;
-  border-radius: 5px;
-  color: black;
-  background-color: white;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 4px;
 `;
 
 const AddBtn = styled.button`
@@ -68,16 +51,10 @@ const AddBtn = styled.button`
   cursor: pointer;
 `;
 
-const test = styled.div`
-  position: absolute;
-  top: 0;
-`;
-
 export const style = {
   Container,
   Input,
   TodoInput,
-  CalendarBtn,
+
   AddBtn,
-  test,
 };

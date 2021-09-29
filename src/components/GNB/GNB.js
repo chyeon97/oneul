@@ -9,10 +9,7 @@ const GNB = (props) => {
   return (
     <Container>
       <Logo>ONUEL</Logo>
-      <MenuLayout>
-        <Menu checked={true}>태스크 관리</Menu>
-        <Menu checked={false}>태스크 분석</Menu>
-      </MenuLayout>
+      <MenuLayout></MenuLayout>
       <DateLayout>{convertDate(date)}</DateLayout>
     </Container>
   );
