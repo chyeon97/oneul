@@ -1,7 +1,12 @@
+import React, { useEffect } from "react";
 import TaskManage from "pages/TaskManage";
 import TaskAnalysis from "pages/TaskAnalysis";
-import styled from "styled-components";
+import { getData } from "Commuication/communications";
+
 function App() {
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <>
       <TaskManage />
@@ -9,11 +14,5 @@ function App() {
     </>
   );
 }
-
-const Container = styled.div`
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-`;
 
 export default App;
