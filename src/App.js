@@ -12,7 +12,6 @@ function App() {
   }, []);
 
   const openModal = useSelector((state) => state);
-  console.log(datas);
   return (
     <>
       {openModal.showModal && (
@@ -22,7 +21,7 @@ function App() {
           status={openModal.status}
         />
       )}
-      <TaskManage todos={datas} />
+      <TaskManage todos={datas} setDatas={setDatas} />
       <TaskAnalysis />
     </>
   );

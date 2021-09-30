@@ -5,12 +5,12 @@ import Contents from "components/Task";
 import styled from "styled-components";
 import devices from "styles/device";
 
-const TaskManage = ({ todos }) => {
+const TaskManage = ({ todos, setDatas }) => {
   return (
     <Container>
       <GNB />
       <Body>
-        <Head />
+        <Head setDatas={setDatas} />
         <Contents todos={todos}></Contents>
       </Body>
     </Container>

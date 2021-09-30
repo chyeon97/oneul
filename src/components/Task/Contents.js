@@ -16,13 +16,14 @@ const Contents = ({ todos }) => {
         <Section>
           {todos
             ? todos.map((todo) => {
-                console.log(todo);
                 return (
-                  <Item
-                    color={"#f6b352"}
-                    value={todo.todoName}
-                    date={convertDate2(new Date(todo.dueDate))}
-                  ></Item>
+                  todo.completed === 1 && (
+                    <Item
+                      color={"#f6b352"}
+                      value={todo.todoName}
+                      date={convertDate2(new Date(todo.dueDate))}
+                    ></Item>
+                  )
                 );
               })
             : null}
@@ -31,17 +32,39 @@ const Contents = ({ todos }) => {
       {/* IN PROGRESS */}
       <Box>
         <Label label={"IN PROGRESS"} color={"#ABD0CE"} />
-        <Section></Section>
+        <Section>
+          {todos
+            ? todos.map((todo) => {
+                return (
+                  todo.completed === 2 && (
+                    <Item
+                      color={"#f6b352"}
+                      value={todo.todoName}
+                      date={convertDate2(new Date(todo.dueDate))}
+                    ></Item>
+                  )
+                );
+              })
+            : null}
+        </Section>
       </Box>
       {/* DONE */}
       <Box>
         <Label label={"DONE"} color={"#C5E99B"} />
         <Section>
-          <Item
-            color={"#C0C0C0"}
-            value={"TestDoneTestDoneTestDoneTestDoneTestDoneTestDone"}
-            date={["2021.09.15", <br />, "AM 10:30"]}
-          />
+          {todos
+            ? todos.map((todo) => {
+                return (
+                  todo.completed === 3 && (
+                    <Item
+                      color={"#f6b352"}
+                      value={todo.todoName}
+                      date={convertDate2(new Date(todo.dueDate))}
+                    ></Item>
+                  )
+                );
+              })
+            : null}
         </Section>
       </Box>
     </Container>

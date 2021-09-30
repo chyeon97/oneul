@@ -1,18 +1,28 @@
 import React, { useState } from "react";
-import Calendar from "react-calendar";
 import { style } from "./style";
-import { convertDate2 } from "utils";
 import "react-calendar/dist/Calendar.css";
 import MyCalendar from "components/Calendar/Calendar";
+import { insertData } from "Commuication/communications";
 
-const Header = () => {
+const Header = ({ setDatas }) => {
   const [openCalendar, setOpenCalendar] = useState(false);
   const [value, setValue] = useState(new Date());
-
+  const [inputValue, setInputValue] = useState("");
+  const onHandleChange = (e) => {
+    setInputValue(e.target.value);
+  };
+  const onClickAdd = () => {
+    insertData(inputValue, value, setDatas);
+    setInputValue("");
+  };
   return (
     <Container>
       <Input>
-        <TodoInput placeholder="할 일을 기입해주세요." />
+        <TodoInput
+          value={inputValue}
+          placeholder="할 일을 기입해주세요."
+          onChange={onHandleChange}
+        />
         <MyCalendar
           open={openCalendar}
           value={value}
@@ -20,7 +30,7 @@ const Header = () => {
           setValue={setValue}
         />
       </Input>
-      <AddBtn>추가</AddBtn>
+      <AddBtn onClick={onClickAdd}>추가</AddBtn>
     </Container>
   );
 };
