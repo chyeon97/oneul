@@ -35,7 +35,7 @@ export async function updateData(
       completed: completed,
       todoName: todoName,
       dueDate: new Date(dueDate),
-      endDate: completed === 3 && endDate,
+      endDate: completed === 3 ? endDate : null,
     })
     .then((resolve) => getData(setDatas))
     .catch((error) => console.log(error));

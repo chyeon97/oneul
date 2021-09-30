@@ -24,6 +24,7 @@ const Modal = ({ todoId, todo, dueDate, status, setDatas }) => {
   };
 
   const onReverseClick = () => {
+    console.log(todoId, reviseStatus, reviseTodoName, date);
     updateData(
       todoId,
       reviseStatus,
