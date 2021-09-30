@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import TaskManage from "pages/TaskManage";
 import TaskAnalysis from "pages/TaskAnalysis";
 import { getData } from "Commuication/communications";
@@ -6,12 +6,13 @@ import Modal from "components/Modal";
 import { useSelector } from "react-redux";
 
 function App() {
+  const [datas, setDatas] = useState([]);
   useEffect(() => {
-    getData();
+    getData(setDatas);
   }, []);
 
   const openModal = useSelector((state) => state);
-  console.log(openModal);
+  console.log(datas);
   return (
     <>
       {openModal.showModal && (
@@ -21,7 +22,7 @@ function App() {
           status={openModal.status}
         />
       )}
-      <TaskManage />
+      <TaskManage todos={datas} />
       <TaskAnalysis />
     </>
   );

@@ -5,13 +5,13 @@ import Contents from "components/Task";
 import styled from "styled-components";
 import devices from "styles/device";
 
-const TaskManage = () => {
+const TaskManage = ({ todos }) => {
   return (
     <Container>
       <GNB />
       <Body>
         <Head />
-        <Contents></Contents>
+        <Contents todos={todos}></Contents>
       </Body>
     </Container>
   );
