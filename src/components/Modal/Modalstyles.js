@@ -20,7 +20,7 @@ const Container = styled.div`
   position: fixed;
   width: 500px;
   padding: 15px 30px;
-  top: 50%;
+  top: 36%;
   left: 50%;
   margin-left: -150px;
   background-color: white;
