@@ -1,17 +1,9 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { closeModal } from "store/actions";
 import styled from "styled-components";
 
-const MyButton = ({ bgcolor, color, label }) => {
-  const dispatch = useDispatch();
-  const onClickModal = (label) => {
-    switch (label) {
-      case label === "취소":
-        return dispatch(closeModal());
-      default:
-        return dispatch(closeModal());
-    }
+const MyButton = ({ bgcolor, color, label, onClick }) => {
+  const onClickModal = () => {
+    onClick();
   };
   return (
     <Container bgcolor={bgcolor} color={color} onClick={onClickModal}>

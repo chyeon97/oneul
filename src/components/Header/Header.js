@@ -12,8 +12,10 @@ const Header = ({ setDatas }) => {
     setInputValue(e.target.value);
   };
   const onClickAdd = () => {
-    insertData(inputValue, value, setDatas);
-    setInputValue("");
+    if (inputValue.length !== 0) {
+      insertData(inputValue, value, setDatas);
+      setInputValue("");
+    }
   };
   return (
     <Container>

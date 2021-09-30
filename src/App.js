@@ -16,9 +16,11 @@ function App() {
     <>
       {openModal.showModal && (
         <Modal
+          todoId={openModal.todoId}
           todo={openModal.todo}
           dueDate={openModal.duedate}
           status={openModal.status}
+          setDatas={setDatas}
         />
       )}
       <TaskManage todos={datas} setDatas={setDatas} />

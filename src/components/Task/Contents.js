@@ -19,8 +19,11 @@ const Contents = ({ todos }) => {
                 return (
                   todo.completed === 1 && (
                     <Item
+                      key={todo.id}
+                      id={todo.id}
                       color={"#f6b352"}
                       value={todo.todoName}
+                      status={todo.completed}
                       date={convertDate2(new Date(todo.dueDate))}
                     ></Item>
                   )
@@ -38,6 +41,9 @@ const Contents = ({ todos }) => {
                 return (
                   todo.completed === 2 && (
                     <Item
+                      key={todo.id}
+                      id={todo.id}
+                      status={todo.completed}
                       color={"#f6b352"}
                       value={todo.todoName}
                       date={convertDate2(new Date(todo.dueDate))}
@@ -57,8 +63,11 @@ const Contents = ({ todos }) => {
                 return (
                   todo.completed === 3 && (
                     <Item
+                      key={todo.id}
+                      id={todo.id}
                       color={"#f6b352"}
                       value={todo.todoName}
+                      status={todo.completed}
                       date={convertDate2(new Date(todo.dueDate))}
                     ></Item>
                   )

@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import STATUS from "utils/convertStatus";
 
-const StateButton = ({ color, state }) => {
-  return <Label color={color}>{state}</Label>;
+const StateButton = ({ color, state, checked, onClickStatus }) => {
+  return (
+    <Label color={color} checked={checked} onClick={() => onClickStatus(state)}>
+      {STATUS[state - 1]}
+    </Label>
+  );
 };
-
-const Container = styled.div`
-  width: auto;
-  height: auto;
-  background-color: ${(props) => props.color};
-`;
 
 const Label = styled.button`
   margin: 10px;
@@ -21,6 +20,7 @@ const Label = styled.button`
   border-radius: 5px;
   font-weight: bold;
   background-color: ${(props) => props.color};
+  border: ${(props) => props.checked && "2px solid black"};
   :hover {
     border: 2px solid black;
   }

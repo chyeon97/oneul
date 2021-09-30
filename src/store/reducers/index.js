@@ -10,6 +10,7 @@ export default function modals(state = INIT_STATE, action) {
       return {
         ...state,
         showModal: true,
+        todoId: action.todoId,
         todo: action.todo,
         duedate: action.duedate,
         status: action.status,
