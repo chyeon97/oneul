@@ -36,9 +36,12 @@ function App() {
       temp[getTimeSlot(hour)] += 1;
     });
     let percent = temp.map((e) => {
-      return e / Dones.length;
+      if (e === 0) {
+        return e;
+      } else {
+        return e / Dones.length;
+      }
     });
-    console.log(percent);
     return percent;
   }, [datas]);
 
