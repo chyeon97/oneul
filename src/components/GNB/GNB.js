@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { style } from "./style";
-import { convertDate } from "utils";
+
+import { convertDateGNB } from "utils/convertDate";
 import PropTypes from "prop-types";
 
 const GNB = (props) => {
@@ -10,12 +11,12 @@ const GNB = (props) => {
     <Container>
       <Logo>ONUEL</Logo>
       <MenuLayout></MenuLayout>
-      <DateLayout>{convertDate(date)}</DateLayout>
+      <DateLayout>{convertDateGNB(date)}</DateLayout>
     </Container>
   );
 };
 
-const { Container, Logo, DateLayout, Menu, MenuLayout } = style;
+const { Container, Logo, DateLayout, MenuLayout } = style;
 
 GNB.propTypes = {
   checked: PropTypes.bool,

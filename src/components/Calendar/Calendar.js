@@ -1,8 +1,7 @@
 import React from "react";
 import Calendar from "react-calendar";
-// import "react-calendar/dist/Calendar.css";
 import "./CalendarStyle.css";
-import { convertDate2 } from "utils";
+import * as convert from "utils/convertDate";
 import styled from "styled-components";
 import devices from "styles/device";
 
@@ -20,7 +19,7 @@ const MyCalendar = ({ open, value, setOpenCalendar, setValue }) => {
     <Container>
       <CalendarBtn onClick={onDateClick}>
         🗓 &nbsp;
-        {convertDate2(value)}
+        {convert.convertDate(value)}
       </CalendarBtn>
       {open && <Calendar value={value} onChange={onChange} />}
     </Container>

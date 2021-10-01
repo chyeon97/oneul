@@ -3,8 +3,8 @@ import React from "react";
 import Label from "components/Label";
 import Item from "components/Item";
 import { style } from "./styles";
-import { convertDate2 } from "utils";
-
+// import convertEndDate, { convertDate2 } from "utils/convertDate3";
+import * as convert from "utils/convertDate";
 const Contents = ({ todos }) => {
   return (
     <Container>
@@ -24,7 +24,7 @@ const Contents = ({ todos }) => {
                       color={"#f6b352"}
                       value={todo.todoName}
                       status={todo.completed}
-                      date={convertDate2(new Date(todo.dueDate))}
+                      date={convert.convertDate(new Date(todo.dueDate))}
                     ></Item>
                   )
                 );
@@ -46,7 +46,7 @@ const Contents = ({ todos }) => {
                       status={todo.completed}
                       color={"#f6b352"}
                       value={todo.todoName}
-                      date={convertDate2(new Date(todo.dueDate))}
+                      date={convert.convertDate(new Date(todo.dueDate))}
                     ></Item>
                   )
                 );
@@ -65,10 +65,10 @@ const Contents = ({ todos }) => {
                     <Item
                       key={todo.id}
                       id={todo.id}
-                      color={"#f6b352"}
+                      color={"#C0C0C0"}
                       value={todo.todoName}
                       status={todo.completed}
-                      date={convertDate2(new Date(todo.dueDate))}
+                      date={convert.convertEndDate(new Date(todo.endDate))}
                     ></Item>
                   )
                 );
