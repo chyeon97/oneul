@@ -2,33 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import devices from "styles/device";
 
-const ProgressBar = () => {
+const ProgressBar = ({ todos }) => {
+  const getLabel = ["🌞 Morning", "🌆 Daytime", "🌃 Evening", "🌙 Night"];
+
   return (
     <Container>
-      <InnerContainer>
-        <Label>test</Label>
-        <TaskCount>1 tasks</TaskCount>
-        <Progress key={"test"} value={0.1} />
-        <TaskPercent>10%</TaskPercent>
-      </InnerContainer>
-      <InnerContainer>
-        <Label>test</Label>
-        <TaskCount>1 tasks</TaskCount>
-        <Progress key={"test"} value={0.1} />
-        <TaskPercent>10%</TaskPercent>
-      </InnerContainer>
-      <InnerContainer>
-        <Label>test</Label>
-        <TaskCount>1 tasks</TaskCount>
-        <Progress key={"test"} value={0.1} />
-        <TaskPercent>10%</TaskPercent>
-      </InnerContainer>
-      <InnerContainer>
-        <Label>test</Label>
-        <TaskCount>1 tasks</TaskCount>
-        <Progress key={"test"} value={0.1} />
-        <TaskPercent>10%</TaskPercent>
-      </InnerContainer>
+      {[0, 1, 2, 3].map((id) => {
+        return (
+          <InnerContainer>
+            <Label>{getLabel[id]}</Label>
+            <Progress key={"test"} value={todos[id]} />
+            <TaskPercent>{(todos[id] * 100).toFixed(1)}%</TaskPercent>
+          </InnerContainer>
+        );
+      })}
     </Container>
   );
 };

@@ -4,7 +4,7 @@ import Label from "components/Label";
 import ProgressBar from "components/ProgressBar";
 import devices from "styles/device";
 
-const WhoamI = () => {
+const WhoamI = ({ todos }) => {
   return (
     <Container>
       <LabelLayout>
@@ -12,7 +12,7 @@ const WhoamI = () => {
       </LabelLayout>
       <ContentsLayout>
         <ProgressBarLayout>
-          <ProgressBar />
+          <ProgressBar todos={todos} />
         </ProgressBarLayout>
       </ContentsLayout>
     </Container>

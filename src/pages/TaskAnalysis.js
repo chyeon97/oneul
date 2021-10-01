@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import WhoamI from "components/Analysis";
 import devices from "styles/device";
-const TaskAnalysis = () => {
+const TaskAnalysis = ({ todos }) => {
   return (
     <Container>
-      <WhoamI></WhoamI>
+      <WhoamI todos={todos}></WhoamI>
     </Container>
   );
 };
